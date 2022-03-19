@@ -55,10 +55,52 @@ p{
 /*---------------------------
 	BUTTONS
 ---------------------------*/
+.section-btn {
+	margin: 32px 0 0 0;
+	padding: 0;
+}
 
+.section-btn a {
+	color: #fff;
+	font-weight: normal;
+	line-height: 45px;
+	perspective: 1000px;
+}
 
+.section-btn a span{
+	position: relative;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 0.5px;
+	padding: 2px 27px;
+	background: 4dc47d;
+	border-radius: 1px;
+	transition: transform 0.3s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d;
+}
 
+.section-btn a span::before{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	background: #000;
+	border-radius: 1px;
+	padding: 2px 27px;
+	transition: background 0.3s;
+	transform: rotateX(-90deg);
+	content: attr(data-hover);
+	transform-origin: 50% 0;
+}
 
+.section-btn a:hover span,
+.section-btn a:focus span{
+	transform: rotateX(90deg) translateY(-22px);
+}
 
 /*--------------------------
 	GENERAL
@@ -151,9 +193,33 @@ p{
 	background: rgba(0,0,0,0.75);
 }
 
+#home h1{
+	color: #fff;
+	font-size: 7vw;
+	line-height: 1.2em;
+}
+
+#home p{
+	color: rgba(250,250,250, 0.7);
+}
+
+#home .home-text {
+	z-index: 99;
+}
+
+
 /*----------------------
 	ABOUT
 ----------------------*/
+#about{
+	position: relative;
+}
+
+about h3{
+	font-size: 14px;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+}
 
 
 
@@ -161,7 +227,55 @@ p{
 	PROJECT
 ---------------------*/
 
+#project .project-item{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 25px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+}
 
+#project .project-item .project-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: all ease-in-out 0.4s;
+}
+
+#project .project-item:hover .project-overlay{
+	opacity: 1;
+}
+
+#project .project-item .project-overlay .project-info{
+	padding: 12em 0;
+}
+
+.project-info h1{
+	color: #fff;
+	margin: 0;
+}
+
+.project-info h3{
+	color: #d9d9d9;
+	margin-top: 0;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+}
+
+.project-item img{
+	transition: all ease-in-out 0.4s;
+}
+
+.project-item:hover img{
+	transform: scale(1.1);
+}
 
 
 /*--------------------
