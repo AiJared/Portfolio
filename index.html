@@ -15,28 +15,30 @@
 </head>
 <body>
 <header>
-	<nav class="navbar navbar-expand-lg navbar-light container py-3 fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Artificial Intelligence</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa fa-bars text-light" aria-hidden="true"></i>
+	<nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top bg">
+    <div class="container">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Artificial Intelligence</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars text-light" aria-hidden="true"></i>
 
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto float-right text-right">
-        <li class="nav-item">
-          <a class="nav-link ml-5" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ml-5" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ml-5" href="#">Stories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ml-5" href="#">Let's talk</a>
-        </li>
-      </ul>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto float-right text-right">
+          <li class="nav-item">
+            <a class="nav-link ml-5" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-5" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-5" href="#">Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-5" href="#">Let's talk</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
@@ -169,6 +171,33 @@
     <div class="row">
       <div class="col-md-5 col-sm-6">
         <h2>The Future of AI</h2>
+        <p>AI is projected to have a lasting impact on <br> just about every industry imaginable</p>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="footer-info">
+          <h2>Keep In Touch</h2>
+          <p><a href="#">0768259779</a></p>
+          <p><a href="#"></a>ojared511@gmail.com</p>
+          <p><a href="#">Our location</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-12">
+          <h2>About Us</h2>
+          <p>AI/ML Engineering enthusiast. 
+            Interested in AI technologies, there impact on industries and influence on lifestyle.</p>
+          <ul class="social-icon list-unlysted d-flex">
+            <li><a href="#"><i class="fa fa-twitter tex-dark px-1" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook text-dark px-1" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram text-dark px-1" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin text-dark px-1" aria-hidden="true"></i></a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-12 col-sm-12">
+        <div class="copyright-text">
+          <p>Copyright © 2022 Company Name | AI: <a href="#">Future of Tech</a></p>
+        </div>
       </div>
     </div>
   </div>
@@ -179,6 +208,11 @@
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+<script>
+  $(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50)
+  })
+</script>
 
 <script>
   var swiper = new Swiper('.swiper-container',{

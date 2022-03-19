@@ -105,8 +105,14 @@ p{
 /*--------------------------
 	GENERAL
 --------------------------*/
+.bg{
+	background: transparent;
+	transition: 0.2s ease;
+}
 
-
+.bg.scrolled{
+	background: #4dc47d;
+}
 
 
 #about, #project,
